@@ -1,0 +1,207 @@
+                            /* display:flex */
+                            /* link of display flex =sumit saha = https://www.youtube.com/watch?v=kRS5ficucNM&t=2564s */
+
+/* 1>> fr (fraction)
+2>> float use for img is not div3
+3>> x exes/ row/ main/ horizontal = <---->
+4>> Y exes/ column/ cross/ varticel =\
+5>> align কথাটা থাকলে বুঝে নিতে হবে এটি row বরাবর কাজ করবে */
+
+
+                        /*work of parent div*/
+
+/* code of child div */
+.flex-container div {
+    background-color: #ffffff;
+    text-align: center;
+    margin: 2px;
+    padding: 5px;
+    }
+
+
+/*আমরা জানি div হচ্ছে একটা block element কিন্তু যখনি display:flex ব্যবহার করবো inline-block এর মত কাজ করে উপরে উঠে যাবে*/
+/* code of parent div */
+.flex-container {
+    background-color: #66CC33;
+    text-align: center;
+    display: flex;
+    }
+
+                                        /*flex-direction:row & row-reverse*/
+
+/*display:flex করলে default ভাবে row থাকে row-reverse দিলে সিরিয়াল উল্টে যাবে*/
+.flex-container {
+    display: flex;
+    flex-direction:row;
+    }
+
+
+                                /*flex-direction:column & column-reverse*/
+
+/* row-reverse দিলে সিরিয়াল উল্টে যাবে */
+.flex-container {
+    display: flex;
+    flex-direction:column;
+}
+
+
+                                    /*flex-wrap:row & row-reverse*/
+
+/*parent div এর ভেতরে child div বেশি থাকলে <br> করে নিচে নামানোর জন্য flex-wrap ব্যবহার করা হয় */
+.flex-container {
+    display: flex;
+    flex-direction:row;   
+    flex-wrap:wrap;
+}
+
+
+                            /*flex:direction & wrap এর শর্টকার্ট ভার্সন হলো flex:flow*/
+
+/*flex-flow দিলে juntify-content & align-items & align-content দিতে হয়*/
+
+                                /*juntify-content*/
+
+/*flex-start মানে প্রথম থেকে শুরু হবে*/
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:flex-start;
+    }
+
+/*flex-end মানে শেষ থেকে শুরু হবে*/
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:flex-end;
+    }
+
+/*center মানে মধ্য থেকে শুরু হবে*/
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:center;
+    }
+
+/*space-around মানে চার পাশে spaceহবে*/
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-around ;
+    }
+
+/*space-evenly মানে চার পাশে সমান spaceহবে*/
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-evenly;
+    }
+
+/*space-between মানে দুই সাইডে চলে যাবে এবং মধ্যের প্রতিটির দুইটার মাঝে spaceহবে*/
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:space-between;
+    }
+
+                            /*align-items*/
+/*flex-start মানে column এর প্রথম দিকে সমান হবে */
+.flex-container {
+    display: flex;
+    align-items:flex-start;
+    }
+
+/*flex-end মানে column এর শেষের দিকে সমান হবে */
+.flex-container {
+    display: flex;
+    align-items:flex-end;
+    }
+
+
+/*center মানে column এর মধ্যে দিয়ে সমান হবে */
+.flex-container {
+    display: flex;
+    align-items:center;
+    }
+
+
+/*stretch default থাকে */
+/*baseline মানে baseline অনুসারে করে স্থাপন করে। */
+
+
+
+                                /*align-content*/
+
+/*flex-start মানে row উপরে দিয়ে মিল করবে*/
+.flex-container {
+    display: flex;
+    height: 100px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    }
+
+
+/*flex-end মানে row নিচ দিয়ে মিল করবে*/
+.flex-container {
+    display: flex;
+    height: 100px;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    }
+
+
+/*center মানে row মাঝখান দিয়ে মিল করবে*/
+.flex-container {
+    display: flex;
+    height: 100px;
+    flex-wrap: wrap;
+    align-content:center;
+    }
+
+/*stretch/ space-around/ space-between দিয়েও কাজ করা হয়*/
+
+
+                                       /*work of child div*/    
+
+                                            /* order */
+
+/*child div এর প্রতিটির order থাকে ০(শূন্য) */
+প্রতিটি child এর order দেওয়া যাবে যেমন, যে order সংখ্যা বড় বা বেশি থাকবে সেগোলো সবার পরে থাকবে 
+*/
+
+.one{
+    order:6;
+}
+.two{
+    order:5;
+}
+
+
+                                            /* flex-grow */
+/*flex-grow এর default 0 , সংখ্যা যত বেশি হবে তত width এর মত ডানে বাড়বে*/
+                                            
+.three{
+    flex-grow:5;
+ }
+                                            
+                                            
+                                            /* flex-shrink */
+/*flex-shrink এর default 1 , সংখ্যা যত কম হবে তত width এর মত কমবে */
+
+.five{
+    flex-shrink:0;
+}
+
+
+                                            /* flex-basis */
+/*parent div কে display:flex করে child div কে width এর পরিবর্তে fles-basis:30% ব্যবহার করা হয়*/
+
+.six{
+    flex-basis:30%;
+}
+
+/*flex-grow & flex-shrink & flex-basis এই তিনটার শর্টকার্ট হলো flex যেমন*/
+
+.four{
+    /* flex: grow/ shrink/ basis; */
+    flex:    5    0       30%;    
+}
